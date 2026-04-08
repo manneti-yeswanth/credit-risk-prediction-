@@ -4,7 +4,7 @@
 
 An end-to-end machine learning project that predicts the probability of a customer defaulting on a loan.
 
-The system uses **XGBoost** for prediction, handles imbalanced data using **SMOTE**, and provides an interactive **Streamlit web application** for real-time predictions. The project also includes **Explainable AI (SHAP)** to interpret model decisions.
+The system uses **XGBoost** for high-performance prediction, handles imbalanced data using **SMOTE**, and provides an interactive **Streamlit web application** for real-time predictions. It also includes **Explainable AI (SHAP)** to interpret model decisions.
 
 ---
 
@@ -25,10 +25,9 @@ The system uses **XGBoost** for prediction, handles imbalanced data using **SMOT
 * Pandas, NumPy
 * Scikit-learn
 * XGBoost
-* Imbalanced-learn (SMOTE)
 * SHAP
-* Streamlit
 * Matplotlib, Seaborn
+* Streamlit
 
 ---
 
@@ -36,35 +35,49 @@ The system uses **XGBoost** for prediction, handles imbalanced data using **SMOT
 
 ### 🔹 App Interface
 
-![App UI](app_ui.png)
+<img src="app_ui.png" width="700">
+
+User-friendly interface for entering customer details and predicting credit risk.
+
+---
 
 ### 🔹 Prediction Result
 
-![Prediction](prediction.png)
+<img src="prediction.png" width="700">
+
+Displays risk level along with key contributing factors.
 
 ---
-
-## 📊 Model Evaluation
 
 ### 🔹 Confusion Matrix
 
-![Confusion Matrix](confusion_matrix.png)
+<img src="confusion_matrix.png" width="700">
 
-### 🔹 Feature Importance
-
-![Feature Importance](feature_importance.png)
-
-### 🔹 Correlation Heatmap
-
-![Heatmap](heatmap.png)
+📊 Confusion Matrix showing model performance on test data.
 
 ---
 
-## 🔍 Explainability (SHAP)
+### 🔹 Feature Importance
 
-SHAP (SHapley Additive exPlanations) is used to understand how each feature contributes to the prediction.
+<img src="feature_importance.png" width="700">
 
-![SHAP](shap_plot.png)
+📊 Identifies the most important features influencing predictions.
+
+---
+
+### 🔹 Correlation Heatmap
+
+<img src="heatmap.png" width="700">
+
+📊 Shows relationships between different financial features.
+
+---
+
+### 🔹 SHAP Explainability
+
+<img src="shap_plot.png" width="700">
+
+📊 Explains how each feature contributes to individual predictions.
 
 ---
 
@@ -82,14 +95,22 @@ requirements.txt
 
 ## ▶️ Run Locally
 
-```bash
+```
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
 ---
 
-## 🌐 Future Improvements
+## 📈 Business Impact
+
+* Helps financial institutions identify high-risk customers
+* Reduces loan default losses
+* Supports data-driven credit decision making
+
+---
+
+## 🔮 Future Improvements
 
 * Model tuning for better performance
 * Deploy using cloud platforms
