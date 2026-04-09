@@ -120,4 +120,4 @@ streamlit run app.py
 
 ## 👨‍💻 Author
 
-Yeshwanth
+Yeshwanth Reddy M
