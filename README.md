@@ -4,7 +4,9 @@
 
 An end-to-end Machine Learning project that predicts the probability of a customer defaulting on a loan.
 
-The system uses **XGBoost** for high-performance prediction, handles imbalanced data using **SMOTE**, and provides an interactive **Streamlit web application** for real-time predictions. It also integrates **Explainable AI (SHAP)** to interpret model decisions and improve transparency.
+The system uses **XGBoost** for high-performance prediction, handles imbalanced data using **SMOTE**, and provides an interactive **Streamlit web application** for real-time predictions.
+
+It also integrates **Explainable AI (SHAP)** to interpret model decisions and includes a **decision system (Approve / Reject / Review)** to simulate real-world financial applications.
 
 ---
 
@@ -17,11 +19,12 @@ The system uses **XGBoost** for high-performance prediction, handles imbalanced 
 ## 🚀 Key Features
 
 * End-to-end ML pipeline (data preprocessing → modeling → deployment)
-* Imbalanced data handling using SMOTE
-* High-performance XGBoost model
-* Interactive Streamlit web application
+* Imbalanced data handling using **SMOTE**
+* High-performance **XGBoost model**
+* Interactive **Streamlit web application**
 * Model evaluation using multiple metrics
-* Explainability using SHAP (feature importance & individual prediction insights)
+* Explainability using **SHAP** (feature importance & individual prediction insights)
+* **Decision system** for loan approval (Approve / Reject / Manual Review)
 
 ---
 
@@ -37,51 +40,29 @@ The system uses **XGBoost** for high-performance prediction, handles imbalanced 
 
 ---
 
+## 📊 Model Performance
+
+* Evaluation Metrics: Accuracy, Precision, Recall, ROC-AUC
+* Handles class imbalance effectively using SMOTE
+* Optimized for better generalization on unseen data
+
+---
+
 ## 📸 Application Demo
 
 ### 🔹 App Interface
 
-<img src="app_ui.png" width="700">
-
 🖥️ User-friendly interface for entering customer details and predicting credit risk
-
----
 
 ### 🔹 Prediction Result
 
-<img src="prediction.png" width="700">
-
-📊 Displays predicted risk level along with key contributing factors
-
----
-
-### 🔹 Confusion Matrix
-
-<img src="confusion_matrix.png" width="700">
-
-📊 Confusion Matrix showing model performance on test data
-
----
+📊 Displays predicted risk level along with probability and decision outcome
 
 ### 🔹 Feature Importance
 
-<img src="feature_importance.png" width="700">
-
 📊 Identifies the most important features influencing predictions
 
----
-
-### 🔹 Correlation Heatmap
-
-<img src="heatmap.png" width="700">
-
-📊 Shows relationships between different financial features
-
----
-
 ### 🔹 SHAP Explainability
-
-<img src="shap_plot.png" width="700">
 
 📊 Explains how each feature contributes to individual predictions
 
@@ -89,13 +70,11 @@ The system uses **XGBoost** for high-performance prediction, handles imbalanced 
 
 ## 📁 Project Structure
 
-```
-app.py
-credit_risk_prediction.ipynb
-loan_model.pkl
-columns.pkl
-requirements.txt
-```
+* `app.py`
+* `credit_risk_prediction.ipynb`
+* `loan_model.pkl`
+* `columns.pkl`
+* `requirements.txt`
 
 ---
 
@@ -118,9 +97,9 @@ streamlit run app.py
 
 ## 🔮 Future Improvements
 
-* Hyperparameter tuning for improved model performance
-* Deployment using advanced cloud platforms (AWS/GCP/Azure)
-* Integration with REST API for real-world applications
+* Hyperparameter tuning for improved performance
+* Deployment using cloud platforms (AWS / GCP / Azure)
+* Integration with REST API for real-world systems
 
 ---
 
