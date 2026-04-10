@@ -4,9 +4,7 @@
 
 An end-to-end Machine Learning project that predicts the probability of a customer defaulting on a loan.
 
-The system uses **XGBoost** for high-performance prediction, handles imbalanced data using **SMOTE**, and provides an interactive **Streamlit web application** for real-time predictions.
-
-It also integrates **Explainable AI (SHAP)** to interpret model decisions and includes a **decision system (Approve / Reject / Review)** to simulate real-world financial applications.
+The system uses XGBoost for prediction, handles imbalanced data using SMOTE, and provides an interactive Streamlit web application for real-time predictions. It also integrates SHAP to explain model decisions and includes a simple decision system (Approve / Reject / Review).
 
 ---
 
@@ -19,12 +17,12 @@ It also integrates **Explainable AI (SHAP)** to interpret model decisions and in
 ## 🚀 Key Features
 
 * End-to-end ML pipeline (data preprocessing → modeling → deployment)
-* Imbalanced data handling using **SMOTE**
-* High-performance **XGBoost model**
-* Interactive **Streamlit web application**
+* Imbalanced data handling using SMOTE
+* XGBoost model
+* Streamlit web application
 * Model evaluation using multiple metrics
-* Explainability using **SHAP** (feature importance & individual prediction insights)
-* **Decision system** for loan approval (Approve / Reject / Manual Review)
+* SHAP explainability
+* Decision system (Approve / Reject / Manual Review)
 
 ---
 
@@ -40,71 +38,91 @@ It also integrates **Explainable AI (SHAP)** to interpret model decisions and in
 
 ---
 
-## 📊 Model Performance
-
-* Evaluation Metrics: Accuracy, Precision, Recall, ROC-AUC
-* Handles class imbalance effectively using SMOTE
-* Optimized for better generalization on unseen data
-
----
-
 ## 📸 Application Demo
 
 ### 🔹 App Interface
 
-🖥️ User-friendly interface for entering customer details and predicting credit risk
+![App UI](app_ui.png)
+
+User-friendly interface for entering customer details and predicting credit risk
+
+---
 
 ### 🔹 Prediction Result
 
-📊 Displays predicted risk level along with probability and decision outcome
+![Prediction](prediction.png)
+
+Displays predicted risk level along with probability and decision
+
+---
+
+### 🔹 Confusion Matrix
+
+![Confusion Matrix](confusion_matrix.png)
+
+Shows model performance on test data
+
+---
 
 ### 🔹 Feature Importance
 
-📊 Identifies the most important features influencing predictions
+![Feature Importance](feature_importance.png)
+
+Identifies the most important features influencing predictions
+
+---
+
+### 🔹 Correlation Heatmap
+
+![Heatmap](heatmap.png)
+
+Shows relationships between financial features
+
+---
 
 ### 🔹 SHAP Explainability
 
-📊 Explains how each feature contributes to individual predictions
+![SHAP](shap_plot.png)
+
+Explains how each feature contributes to individual predictions
 
 ---
 
 ## 📁 Project Structure
 
-* `app.py`
-* `credit_risk_prediction.ipynb`
-* `loan_model.pkl`
-* `columns.pkl`
-* `requirements.txt`
+* app.py
+* credit_risk_prediction.ipynb
+* loan_model.pkl
+* columns.pkl
+* requirements.txt
 
 ---
 
 ## ▶️ Run Locally
 
-```bash
 pip install -r requirements.txt
 streamlit run app.py
-```
 
 ---
 
 ## 📈 Business Impact
 
-* Helps financial institutions identify high-risk customers early
-* Reduces potential loan default losses
-* Enables data-driven and explainable credit decision-making
+* Helps identify high-risk customers early
+* Reduces loan default losses
+* Supports data-driven decision making
 
 ---
 
 ## 🔮 Future Improvements
 
-* Hyperparameter tuning for improved performance
-* Deployment using cloud platforms (AWS / GCP / Azure)
-* Integration with REST API for real-world systems
+* Hyperparameter tuning
+* Cloud deployment
+* API integration
 
 ---
 
 ## 👨‍💻 Author
 
-**Yeshwanth Reddy M**
-🔗 GitHub: https://github.com/manneti-yeswanth
-🔗 LinkedIn: (Add your LinkedIn profile link here)
+Yeshwanth Reddy M
+GitHub: https://github.com/manneti-yeswanth
+LinkedIn: (Add your link)
