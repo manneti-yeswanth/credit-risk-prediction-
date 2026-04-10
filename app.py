@@ -61,9 +61,9 @@ if predict:
     st.markdown("---")
     st.subheader("📊 Prediction Result")
 
-    # -------- COLOR CARDS --------
+    # -------- RISK COLOR --------
     if prob < 0.35:
-        st.success(f"✅ Low Risk ({prob*100:.2f}%)")
+        st.success(f"🟢 Low Risk ({prob*100:.2f}%)")
 
     elif prob < 0.65:
         st.warning(f"🟡 Medium Risk ({prob*100:.2f}%)")
@@ -71,24 +71,42 @@ if predict:
     else:
         st.error(f"🔴 High Risk ({prob*100:.2f}%)")
 
-    # -------- WARNINGS --------
+    # -------- METRIC --------
+    st.metric("📊 Risk Score", f"{prob*100:.2f}%")
+
+    # -------- FINAL DECISION --------
+    st.subheader("🏦 Final Decision")
+
+    if prob >= 0.65:
+        st.error("❌ Loan Rejected")
+
+    elif prob >= 0.35:
+        st.warning("⚠️ Needs Manual Review")
+
+    else:
+        st.success("✅ Loan Approved")
+
+    # -------- KEY INSIGHTS --------
+    st.subheader("📌 Key Insights")
+
     if total_late > 3:
-        st.error("🚨 Too many late payments")
+        st.error("🚨 High risk due to frequent late payments")
 
     if debt_ratio > 1:
-        st.warning("⚠️ High Debt Ratio")
+        st.warning("⚠️ High debt-to-income ratio affecting creditworthiness")
 
     if income < 3000:
-        st.warning("⚠️ Low Income")
+        st.warning("⚠️ Low income may impact repayment ability")
 
     # -------- FEATURE IMPACT --------
     with st.expander("🔍 Feature Impact"):
-        st.json({
-            "Total Late Payments": total_late,
-            "Debt Ratio": debt_ratio,
-            "Income per Person": income_per_person,
-            "Debt per Income": debt_per_income
+
+        feature_df = pd.DataFrame({
+            "Feature": ["Total Late Payments", "Debt Ratio", "Income per Person", "Debt per Income"],
+            "Value": [total_late, debt_ratio, income_per_person, debt_per_income]
         })
+
+        st.table(feature_df)
 
     # -------- FEATURE IMPORTANCE --------
     with st.expander("📈 Feature Importance"):
