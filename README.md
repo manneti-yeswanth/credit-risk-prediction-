@@ -2,11 +2,38 @@
 
 ## 📌 Overview
 
-This project focuses on predicting whether a customer is likely to default on a loan using Machine Learning.
+This project builds an end-to-end Machine Learning system to predict whether a customer is likely to default on a loan. It combines data preprocessing, feature engineering, model training, explainability, and deployment into a single pipeline.
 
-I built an end-to-end pipeline starting from data preprocessing to model deployment. The system uses an XGBoost model for prediction and handles imbalanced data using SMOTE. A Streamlit web app is created to allow users to input customer details and get real-time predictions.
+The system uses **XGBoost** for high-performance prediction, **SMOTE** to handle class imbalance, and **SHAP (Explainable AI)** to interpret model decisions. A **Streamlit web application** is developed to provide real-time predictions and insights.
 
-To make the model more transparent, SHAP (Explainable AI) is used to understand how each feature contributes to the prediction. I also added a simple decision system (Approve / Reject / Review) based on the predicted risk.
+---
+
+## 🎯 Problem Statement
+
+Loan defaults lead to significant financial losses for banks and financial institutions. This project aims to predict the probability of customer default in advance, enabling better risk assessment and informed decision-making.
+
+---
+
+## 📂 Dataset
+
+The dataset contains financial and behavioral attributes of customers such as:
+
+* Income
+* Debt ratio
+* Credit history
+* Payment behavior
+
+These features are used to predict the likelihood of loan default.
+
+---
+
+## ⚙️ How It Works
+
+1. User inputs customer details via Streamlit UI
+2. Data is preprocessed using trained pipeline
+3. XGBoost model predicts default probability
+4. SHAP explains feature contribution
+5. System outputs decision: **Approve / Reject / Review**
 
 ---
 
@@ -18,13 +45,13 @@ To make the model more transparent, SHAP (Explainable AI) is used to understand 
 
 ## 🚀 Key Features
 
-* End-to-end ML pipeline (data preprocessing → modeling → deployment)
-* Handling imbalanced data using SMOTE
-* XGBoost model for prediction
-* Interactive Streamlit web application
-* Risk scoring with decision system (Approve / Reject / Review)
-* Explainability using SHAP
-* Feature engineering for better model performance
+* End-to-end ML pipeline (EDA → Feature Engineering → Modeling → Deployment)
+* Handles imbalanced data using **SMOTE**
+* High-performance **XGBoost model**
+* Real-time prediction using **Streamlit app**
+* Risk-based decision system (Approve / Reject / Review)
+* Explainability using **SHAP values**
+* Feature engineering for improved accuracy
 
 ---
 
@@ -40,13 +67,22 @@ To make the model more transparent, SHAP (Explainable AI) is used to understand 
 
 ---
 
+## 📊 Model Performance
+
+* **ROC-AUC Score:** ~0.83
+* **Accuracy:** ~86%
+* Strong performance in identifying high-risk customers
+* Focused on improving recall for minority (default) class
+
+---
+
 ## 📸 Application Demo
 
 ### 🔹 App Interface
 
 ![App UI](app_ui.png)
 
-User-friendly interface for entering customer details and predicting credit risk.
+User-friendly interface for entering customer details.
 
 ---
 
@@ -54,15 +90,12 @@ User-friendly interface for entering customer details and predicting credit risk
 
 ![Prediction](prediction.png)
 
-Displays predicted risk level, probability score, final decision, and key insights.
+Displays:
 
----
-
-### 🔹 Feature Importance
-
-![Feature Importance](feature_importance.png)
-
-Shows which features contribute the most to the model predictions.
+* Default probability
+* Risk level
+* Final decision
+* Key insights
 
 ---
 
@@ -70,7 +103,15 @@ Shows which features contribute the most to the model predictions.
 
 ![SHAP](shap_plot.png)
 
-Explains how each feature affects an individual prediction using SHAP waterfall plot.
+Visual explanation of how each feature impacts predictions.
+
+---
+
+### 🔹 Feature Importance
+
+![Feature Importance](feature_importance.png)
+
+Shows top features influencing the model.
 
 ---
 
@@ -80,7 +121,7 @@ Explains how each feature affects an individual prediction using SHAP waterfall 
 
 ![Confusion Matrix](confusion_matrix.png)
 
-Used to evaluate model performance on test data.
+Evaluates model classification performance.
 
 ---
 
@@ -88,7 +129,7 @@ Used to evaluate model performance on test data.
 
 ![Heatmap](heatmap.png)
 
-Shows relationships between different financial features.
+Shows relationships between features.
 
 ---
 
@@ -113,9 +154,9 @@ streamlit run app.py
 
 ## 📈 Business Impact
 
-* Helps identify high-risk customers early
-* Reduces loan default losses
-* Supports data-driven decision making
+* Identifies high-risk customers early
+* Helps reduce loan default losses
+* Enables data-driven financial decisions
 
 ---
 
@@ -131,4 +172,4 @@ streamlit run app.py
 
 **Yeshwanth Reddy M**
 🔗 GitHub: https://github.com/manneti-yeswanth
-🔗 LinkedIn: (Add your LinkedIn profile link)
+🔗 LinkedIn: www.linkedin.com/in/manneti-yeswanth-reddy-2758693b6
